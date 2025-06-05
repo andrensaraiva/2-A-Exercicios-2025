@@ -1,6 +1,6 @@
 # 🎮 Repositório da Turma de Jogos Digitais - SESI JP 2ºA (2025) 🚀
 
-![GIF Programando](https://media.tenor.com/mI0wSprints0AAAAC/coding-scaler.gif)
+![GIF Programando](https://media1.tenor.com/m/QmVTfQw3pjYAAAAd/coding-scaler.gif)
 
 ## 🔥 Bem-vindos, Futuros Desenvolvedores de Jogos! 🔥
 
