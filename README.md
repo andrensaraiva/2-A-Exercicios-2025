@@ -1,8 +1,6 @@
 # 🎮 Repositório da Turma de Jogos Digitais - SESI JP 2ºA (2025) 🚀
 
-![Banner do Curso](URL_DO_SEU_GIF_DE_BANNER_AQUI_OU_REMOVA_ESTA_LINHA)
-*Substitua `URL_DO_SEU_GIF_DE_BANNER_AQUI_OU_REMOVA_ESTA_LINHA` por um link direto para um GIF de banner legal, ou apenas delete a linha se não tiver um.*
-
+https://tenor.com/pt-BR/view/coding-scaler-create-impact-monkey-programmer-gif-24991476
 ---
 
 ## 🔥 Bem-vindos, Futuros Desenvolvedores de Jogos! 🔥
@@ -13,8 +11,7 @@ Aqui, cada linha de código é um passo a mais na sua jornada para se tornar um 
 
 ![GIF Programando](https
 :
-//media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif)
-*Sinta-se à vontade para trocar este GIF por outro que ache mais legal! Procure por "coding gif", "game dev gif", etc.*
+[//media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif)](https://tenor.com/pt-BR/view/soa-game-dev-sonic-onset-adventure-roblox-gif-22796744)
 
 ---
 
@@ -55,7 +52,7 @@ Aqui, cada linha de código é um passo a mais na sua jornada para se tornar um 
 
 *(Adicione seu nome abaixo desta linha, seguindo um dos formatos ou criando o seu!)*
 
-*
+*   
 *
 *
 
