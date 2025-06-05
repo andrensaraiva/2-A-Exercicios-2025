@@ -1,0 +1,22 @@
+﻿float a, b, c;
+int a1, b2, c3;
+Console.WriteLine("Máquina de Doces Simualada");
+Console.WriteLine();
+Console.WriteLine("Preço do Chocolate ");
+a= float.Parse(Console.ReadLine());
+Console.WriteLine("Preço da bala");
+b= float.Parse(Console.ReadLine());
+Console.WriteLine("Preço do chiclete");
+c= float.Parse(Console.ReadLine());
+Console.WriteLine("Quantindade de Chocolate");
+a1 = int.Parse(Console.ReadLine());
+Console.WriteLine("Quantidade de Bala");
+b2 = int.Parse(Console.ReadLine());
+Console.WriteLine("Quantidade de Chiclete");
+c3 = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Preço a ser pago");
+Console.WriteLine("Chocolate = R$" + (a * a1));
+Console.WriteLine("Bala = R$" + (b * b2));
+Console.WriteLine("Chiclete = R$" + (c*c3));
+Console.WriteLine("Total = R$" + ((a*a1)+(b*b2)+(c*c3)));
