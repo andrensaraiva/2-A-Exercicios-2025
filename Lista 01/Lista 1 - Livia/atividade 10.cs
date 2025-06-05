@@ -1,0 +1,13 @@
+﻿Console.WriteLine("Diga um adjetivo");
+string adjetivo = Console.ReadLine();
+Console.WriteLine("Diga um personagem de jogo que você admira?");
+string personagem = Console.ReadLine();
+Console.WriteLine("Diga um verbo no infinitivo");
+string verbonoinfinitivo = Console.ReadLine();
+Console.WriteLine("Diga o nome de um lugar perigoso");
+string lugarperigoso = Console.ReadLine();
+Console.WriteLine("Diga o nome de um objeto mágico");
+string objetomagico = Console.ReadLine();
+Console.WriteLine("Diga o nome de um sentimento");
+string sentimento = Console.ReadLine();
+Console.WriteLine(personagem + "O " + adjetivo + " decidiu " + verbonoinfinitivo + " até a " + lugarperigoso + " com a" + objetomagico + " em mãos cheias de " + sentimento + ", nada poderia detê-lo !");
