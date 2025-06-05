@@ -11,8 +11,7 @@ Aqui, cada linha de código é um passo a mais na sua jornada para se tornar um 
 
 ![GIF Programando](https
 :
-[//media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif)](https://tenor.com/pt-BR/view/soa-game-dev-sonic-onset-adventure-roblox-gif-22796744)
-
+[//media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif)](https://media1.tenor.com/m/qJ_zQG8v-jMAAAAd/soa-game-dev.gif)
 ---
 
 ## 🎯 Objetivos Deste Repositório:
