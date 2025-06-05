@@ -1,7 +1,7 @@
 # 🎮 Repositório da Turma de Jogos Digitais - SESI JP 2ºA (2025) 🚀
 
 <p align="center">
-  <img src="https://media.tenor.com/mI0wSprints0AAAAC/coding-scaler.gif" alt="Banner do Curso - Macaquinho Programador" width="600" heigth="200">
+  <img src="https://media.tenor.com/mI0wSprints0AAAAC/coding-scaler.gif" alt="Banner do Curso - Macaquinho Programador" width="600">
   <!-- Ajuste o width="600" para o tamanho desejado -->
 </p>
 
