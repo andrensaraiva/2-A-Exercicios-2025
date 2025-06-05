@@ -1,0 +1,10 @@
+﻿string animal = "nada";
+string cor = "nada";
+Console.WriteLine("vamos criar o seu novo apelido! Para começar, me fale o seu animal favorito...");
+animal = Console.ReadLine();
+Console.WriteLine("Ótimo, eu adoro " + animal);
+Console.WriteLine("agora quero saber a sua cor favorita...");
+cor = Console.ReadLine();
+Console.WriteLine("Uma ótima escolha também");
+Console.WriteLine("O seu novo apelido pode ser...");
+Console.WriteLine(animal + " " +  cor);

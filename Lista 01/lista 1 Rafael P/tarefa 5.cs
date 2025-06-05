@@ -1,0 +1,11 @@
+﻿String nomeG = "";
+String lemaG = "";
+Console.WriteLine("para começar, qual vai ser o nome da sua guilda?");
+nomeG = Console.ReadLine();
+Console.WriteLine("ah, um bom nome para uma guilda");
+Console.WriteLine("qual será o lema da sua guilda?");
+lemaG = Console.ReadLine();
+Console.WriteLine("então vamos revisar...");
+Console.WriteLine("nome: " + nomeG);
+Console.WriteLine("lema: " + lemaG);
+Console.WriteLine("certo?");

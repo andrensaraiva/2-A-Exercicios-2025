@@ -1,0 +1,12 @@
+﻿String verb = "";
+String subs = "";
+String inim = "";
+Console.WriteLine("vamos trabalhar no seu grito de guerra...");
+Console.WriteLine("me diga um bom verbo...");
+verb = Console.ReadLine();
+Console.WriteLine("ok...");
+Console.WriteLine("e agora um bom substantivo");
+subs = Console.ReadLine();
+Console.WriteLine("por ultimo, me diga pelo o que você luta, qual o seu inimigo?");
+inim = Console.ReadLine();
+Console.WriteLine("Pela " + subs + " Vamos " + verb + " e derrotar o(a) " + inim );
