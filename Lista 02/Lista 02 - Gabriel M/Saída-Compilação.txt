@@ -1,0 +1,6 @@
+﻿A construção começou em 09:15...
+1>------ Compilação iniciada: Projeto: ConsoleApp3, Configuração: Debug Any CPU ------
+1>Ignorando analisadores para acelerar a construção. Você pode executar o comando 'Build' ou 'Rebuild' para executar os analisadores.
+1>ConsoleApp3 -> C:\Users\Aluno\Desktop\GabrielCucabeludodossantos\ConsoleApp3\ConsoleApp3\bin\Debug\net9.0\ConsoleApp3.dll
+========== Compilação: 1 bem-sucedida, 0 com falha, 0 atualizada, 0 ignorada ==========
+========== Compilação concluído às 09:15 e levou 00,571 segundos ==========
