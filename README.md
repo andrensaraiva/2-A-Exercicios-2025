@@ -1,6 +1,6 @@
 # 🎮 Repositório da Turma de Jogos Digitais - SESI JP 2ºA (2025) 🚀
 
-![Banner do Curso](https://tenor.com/pt-BR/view/coding-scaler-create-impact-monkey-programmer-gif-24991476)
+![Banner do Curso](https://media1.tenor.com/m/QmVTfQw3pjYAAAAd/coding-scaler.gif)
 ---
 
 ## 🔥 Bem-vindos, Futuros Desenvolvedores de Jogos! 🔥
