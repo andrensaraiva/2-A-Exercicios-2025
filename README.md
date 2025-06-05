@@ -9,9 +9,7 @@ Este é o nosso quartel-general digital para todas as missões, códigos e desaf
 
 Aqui, cada linha de código é um passo a mais na sua jornada para se tornar um criador de mundos e experiências interativas. Preparem seus teclados, afiem suas mentes lógicas e vamos juntos desbravar o universo da programação de games!
 
-![GIF Programando](https
-:
-[//media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif)](https://media1.tenor.com/m/qJ_zQG8v-jMAAAAd/soa-game-dev.gif)
+![GIF Programando](https://media1.tenor.com/m/qJ_zQG8v-jMAAAAd/soa-game-dev.gif)
 ---
 
 ## 🎯 Objetivos Deste Repositório:
