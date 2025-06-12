@@ -32,7 +32,7 @@ Console.WriteLine("Você se aproxima de uma porta azul misteriosa.");
 // --- Início da Lógica Condicional ---
 // Verifica se o jogador possui a Chave Azul.
 // (jogadorPossuiChaveAzul == true) é o mesmo que (jogadorPossuiChaveAzul) para booleanos.
-if (jogadorPossuiChaveAzul)
+if (jogadorPossuiChaveAzul == true)
 {
     // Bloco de código do IF: Executado se jogadorPossuiChaveAzul for VERDADEIRO.
     Console.WriteLine("Você usa a Chave Azul na fechadura.");
@@ -114,7 +114,7 @@ else // SENÃO (se pelo menos uma das condições do if for FALSA)
     {
         Console.WriteLine("- Mana insuficiente! Você precisa de pelo menos 50 de mana.");
     }
-    if (!barraEspecialCheia) // Usando o operador NÃO (!)
+    if (barraEspecialCheia == false) // Usando o operador NÃO (!)
     {
         Console.WriteLine("- Sua barra de especial ainda não está carregada!");
     }
@@ -134,7 +134,7 @@ Console.WriteLine($"Possui Chave Antiga: {possuiChaveAntiga} | Conhece Palavra S
 // --- Início da Lógica Condicional com Operador OU ---
 // Verifica se o jogador possui a chave OU se conhece a palavra secreta.
 // PELO MENOS UMA das condições precisa ser VERDADEIRA para o bloco if executar.
-if (possuiChaveAntiga || conhecePalavraSecreta)
+if (possuiChaveAntiga == true || conhecePalavraSecreta == true)
 {
     // Bloco IF: Executado se possuiChaveAntiga for true OU conhecePalavraSecreta for true (ou ambos)
     Console.WriteLine("Um mecanismo antigo é ativado!");
