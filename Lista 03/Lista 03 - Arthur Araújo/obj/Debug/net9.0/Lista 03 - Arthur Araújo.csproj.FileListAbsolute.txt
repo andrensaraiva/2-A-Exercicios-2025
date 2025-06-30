@@ -1,0 +1,14 @@
+C:\Users\Aluno\Desktop\Arthur Araújo 2A\Visual Studio\Lista 03 - Arthur Araújo\bin\Debug\net9.0\Lista 03 - Arthur Araújo.exe
+C:\Users\Aluno\Desktop\Arthur Araújo 2A\Visual Studio\Lista 03 - Arthur Araújo\bin\Debug\net9.0\Lista 03 - Arthur Araújo.deps.json
+C:\Users\Aluno\Desktop\Arthur Araújo 2A\Visual Studio\Lista 03 - Arthur Araújo\bin\Debug\net9.0\Lista 03 - Arthur Araújo.runtimeconfig.json
+C:\Users\Aluno\Desktop\Arthur Araújo 2A\Visual Studio\Lista 03 - Arthur Araújo\bin\Debug\net9.0\Lista 03 - Arthur Araújo.dll
+C:\Users\Aluno\Desktop\Arthur Araújo 2A\Visual Studio\Lista 03 - Arthur Araújo\bin\Debug\net9.0\Lista 03 - Arthur Araújo.pdb
+C:\Users\Aluno\Desktop\Arthur Araújo 2A\Visual Studio\Lista 03 - Arthur Araújo\obj\Debug\net9.0\Lista 03 - Arthur Araújo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aluno\Desktop\Arthur Araújo 2A\Visual Studio\Lista 03 - Arthur Araújo\obj\Debug\net9.0\Lista 03 - Arthur Araújo.AssemblyInfoInputs.cache
+C:\Users\Aluno\Desktop\Arthur Araújo 2A\Visual Studio\Lista 03 - Arthur Araújo\obj\Debug\net9.0\Lista 03 - Arthur Araújo.AssemblyInfo.cs
+C:\Users\Aluno\Desktop\Arthur Araújo 2A\Visual Studio\Lista 03 - Arthur Araújo\obj\Debug\net9.0\Lista 03 - Arthur Araújo.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\Desktop\Arthur Araújo 2A\Visual Studio\Lista 03 - Arthur Araújo\obj\Debug\net9.0\Lista 03 - Arthur Araújo.dll
+C:\Users\Aluno\Desktop\Arthur Araújo 2A\Visual Studio\Lista 03 - Arthur Araújo\obj\Debug\net9.0\refint\Lista 03 - Arthur Araújo.dll
+C:\Users\Aluno\Desktop\Arthur Araújo 2A\Visual Studio\Lista 03 - Arthur Araújo\obj\Debug\net9.0\Lista 03 - Arthur Araújo.pdb
+C:\Users\Aluno\Desktop\Arthur Araújo 2A\Visual Studio\Lista 03 - Arthur Araújo\obj\Debug\net9.0\Lista 03 - Arthur Araújo.genruntimeconfig.cache
+C:\Users\Aluno\Desktop\Arthur Araújo 2A\Visual Studio\Lista 03 - Arthur Araújo\obj\Debug\net9.0\ref\Lista 03 - Arthur Araújo.dll
