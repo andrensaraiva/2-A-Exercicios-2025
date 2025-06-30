@@ -1,0 +1,15 @@
+﻿Console.WriteLine("Construtor de Avatar (Distribuição de Pontos)");
+int n45 = 60;
+Console.WriteLine("Divida 60 pontos");
+Console.WriteLine("Força");
+int n46 = int.Parse(Console.ReadLine());
+Console.WriteLine("Restante:" + (n45 - n46));
+Console.WriteLine("Agilidade");
+int n47 = int.Parse(Console.ReadLine());
+Console.WriteLine("Restante:" + ((n45 - n46) - n47));
+Console.WriteLine("Inteligência");
+int n48 = int.Parse(Console.ReadLine());
+Console.WriteLine("Restante:" + (((n45 - n46) - n47) - n48));
+Console.WriteLine("Força: " + n46);
+Console.WriteLine("Agilidade: " + n47);
+Console.WriteLine("Inteligência: " + n48);
