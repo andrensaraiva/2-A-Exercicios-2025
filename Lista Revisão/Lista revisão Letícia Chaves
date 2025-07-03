@@ -1,0 +1,260 @@
+Console.Write("Digite o nome do seu Herói: ");
+string nomeHeroi = Console.ReadLine();
+Console.WriteLine($"Bem-vindo, {nomeHeroi}, à Saga de Syntaxia!");
+
+
+
+int forca = 5;
+int agilidade = 5;
+int pontosBonus = 10;
+
+Console.WriteLine($"Você tem {pontosBonus} pontos para distribuir.");
+Console.Write("Quantos pontos quer adicionar à Força? ");
+int bonusForca = int.Parse(Console.ReadLine());
+forca += bonusForca;
+agilidade += (pontosBonus - bonusForca);
+
+Console.WriteLine($"Atributos finais – Força: {forca}, Agilidade: {agilidade}");
+
+
+
+
+
+
+float ouro = 25.50f;
+bool possuiMapa = true;
+Console.WriteLine($"Você começa com {ouro}g de ouro e um mapa: {possuiMapa}");
+Console.WriteLine("\n===== FICHA DO PERSONAGEM =====");
+Console.WriteLine($"Nome: {nomeHeroi}");
+Console.WriteLine($"Força: {forca} | Agilidade: {agilidade}");
+Console.WriteLine($"Ouro: {ouro}g | Possui Mapa: {possuiMapa}");
+Console.WriteLine("================================");
+
+
+
+
+Console.WriteLine("\n===== FICHA DO PERSONAGEM =====");
+Console.WriteLine($"Nome: {nomeHeroi}");
+Console.WriteLine($"Força: {forca} | Agilidade: {agilidade}");
+Console.WriteLine($"Ouro: {ouro}g | Possui Mapa: {possuiMapa}");
+Console.WriteLine("================================");
+
+
+
+
+
+
+Console.WriteLine("\nUm Sábio Ancião aparece:");
+Console.WriteLine("“Herói, você deve reunir os 3 Fragmentos de Código para derrotar o Lich do Loop Infinito!”");
+
+
+
+
+
+
+
+Console.WriteLine("\nVocê chega a uma encruzilhada. Deseja ir para a 'floresta' ou para as 'montanhas'?");
+string caminho = Console.ReadLine().ToLower();
+
+if (caminho == "floresta") {
+    Console.WriteLine("Você entra na floresta. O som dos pássaros ecoa entre as árvores antigas.");
+} else if (caminho == "montanhas") {
+    Console.WriteLine("Você escala as montanhas. O vento sopra forte enquanto neblina cobre a trilha.");
+} else {
+    Console.WriteLine("Você fica parado, sem saber o que fazer...");
+}
+
+
+
+
+
+
+
+Console.WriteLine("\nUm portão mágico bloqueia o caminho. É necessário Força ou Agilidade acima de 12.");
+
+if (forca > 12) {
+    Console.WriteLine("Você força o portão com sua força bruta e consegue abri-lo!");
+} else if (agilidade > 12) {
+    Console.WriteLine("Com agilidade, você encontra uma abertura lateral e atravessa!");
+} else {
+    Console.WriteLine("Você não é forte nem ágil o suficiente. Precisa de treinamento...");
+}
+
+
+
+
+
+
+
+
+bool chave1 = true;
+bool chave2 = false; // você pode mudar para true para testar diferentes resultados
+
+if (possuiMapa && chave1 && chave2) {
+    Console.WriteLine("Você abriu o baú com segurança e encontrou o Primeiro Fragmento de Código!");
+} else {
+    Console.WriteLine("Faltam itens necessários para abrir o baú.");
+}
+
+
+
+
+
+
+string[] inventario = new string[4];
+inventario[0] = "Poção de Cura";
+inventario[1] = "Adaga";
+inventario[2] = "Fragmento de Código";
+inventario[3] = ""; // slot vazio
+
+
+
+
+
+
+if (inventario[0] == "Poção de Cura") {
+    Console.WriteLine("Você tem uma Poção de Cura no primeiro slot!");
+} else {
+    Console.WriteLine("Você não tem uma Poção de Cura disponível no primeiro slot.");
+}
+
+
+
+
+
+
+Random dado = new Random(); // Criamos o "Dado do Destino"
+int previsao = dado.Next(1, 21); // Número entre 1 e 20
+Console.WriteLine($"\nOráculo do Caos diz: 'Você tirou {previsao} na Roda do Destino!'");
+
+
+
+
+
+
+
+int sorteio = dado.Next(1, 4); // Gera 1, 2 ou 3
+
+Console.Write("\nItem especial do dia: ");
+switch (sorteio) {
+    case 1:
+        Console.WriteLine("Anel de Foco Arcano");
+        break;
+    case 2:
+        Console.WriteLine("Elixir de Vigor Sombrio");
+        break;
+    case 3:
+        Console.WriteLine("Pergaminho de Teleporte");
+        break;
+
+
+
+
+
+
+
+Console.WriteLine("\n===== Inventário =====");
+for (int i = 0; i < inventario.Length; i++) {
+    string item = string.IsNullOrEmpty(inventario[i]) ? "(vazio)" : inventario[i];
+    Console.WriteLine($"Slot {i + 1}: {item}");
+}
+
+
+
+
+
+
+for (int ciclo = 1; ciclo <= 3; ciclo++) {
+    Console.WriteLine($"\nForjando item {ciclo}...");
+    int chance = dado.Next(1, 5); // 1 a 4
+
+    if (chance == 1) {
+        Console.WriteLine(" Obra-prima forjada! Qualidade excepcional!");
+    } else {
+        Console.WriteLine("Item comum criado.");
+    }
+}
+
+
+
+
+
+
+int goblins = dado.Next(2, 6); // De 2 a 5 goblins
+Console.WriteLine($"\nEmboscada! {goblins} goblins surgem das sombras!");
+
+for (int i = 1; i <= goblins; i++) {
+    Console.WriteLine($"Você derrotou o goblin {i}!");
+}
+
+
+
+
+
+
+
+int hpHeroi = 100;
+int hpLich = dado.Next(120, 181); // Lich com HP entre 120 e 180
+Console.WriteLine($"\n⚔️ Você entra no covil do Lich! Ele tem {hpLich} de vida.");
+
+
+
+
+
+
+int pocaoQtd = 1; // Suponha que o herói tenha uma poção
+
+while (hpHeroi > 0 && hpLich > 0) {
+    Console.WriteLine($"\n--- Turno ---\nSeu HP: {hpHeroi} | HP do Lich: {hpLich}");
+    Console.Write("Escolha sua ação ([A]tacar / [P]oção): ");
+    string acao = Console.ReadLine().ToUpper();
+
+    if (acao == "P" && pocaoQtd > 0) {
+        int cura = dado.Next(15, 26); // Cura entre 15 e 25
+        hpHeroi += cura;
+        pocaoQtd--;
+        Console.WriteLine($"Você usou uma poção e recuperou {cura} de HP. ({pocaoQtd} restante)");
+    } else if (acao == "A") {
+        int danoHeroi = dado.Next(10, 21);
+        hpLich -= danoHeroi;
+        Console.WriteLine($"Você ataca e causa {danoHeroi} de dano!");
+    } else {
+        Console.WriteLine("Ação inválida ou sem poções.");
+    }
+
+    // Lich ataca se ainda estiver vivo
+    if (hpLich > 0) {
+        int danoLich = dado.Next(10, 16);
+        hpHeroi -= danoLich;
+        Console.WriteLine($"O Lich ataca com magia sombria! Você sofre {danoLich} de dano.");
+    }
+
+
+
+
+
+
+if (hpLich > 0 && hpLich < 50) {
+        int chanceFeitico = dado.Next(1, 101); // 1 a 100
+        if (chanceFeitico <= 50) {
+            int danoExtra = 30;
+            hpHeroi -= danoExtra;
+            Console.WriteLine(" O Lich lança seu Feitiço Desesperado! Você sofre +30 de dano!");
+        }
+    }
+}
+
+
+
+
+
+
+
+Console.WriteLine("\n=== Desfecho da Batalha ===");
+if (hpHeroi > 0 && hpLich <= 0) {
+    Console.WriteLine($" {nomeHeroi} derrotou o Lich e salvou o reino de Syntaxia!");
+} else if (hpHeroi <= 0 && hpLich > 0) {
+    Console.WriteLine($" {nomeHeroi} caiu diante do Lich... O ciclo infinito continua.");
+} else {
+    Console.WriteLine("Ambos caíram... Syntaxia permanece em ruínas, aguardando outro herói.");
+}
