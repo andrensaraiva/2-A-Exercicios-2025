@@ -1,0 +1,848 @@
+//1
+Console.WriteLine("Escolha sua classe:");
+Console.WriteLine("[G] Guerreiro");
+Console.WriteLine("[M] Mago");
+Console.WriteLine("[A] Arqueiro");
+Console.Write("Digite a letra da classe: ");
+char classe = char.ToUpper(Console.ReadKey().KeyChar);
+Console.WriteLine();
+
+switch (classe)
+{
+    case 'G':
+        Console.WriteLine("Você escolheu ser um valente Guerreiro! Força e honra!");
+        break;
+    case 'M':
+        Console.WriteLine("Você escolheu o caminho arcano do Mago! Sabedoria e poder!");
+        break;
+    case 'A':
+        Console.WriteLine("Você escolheu a precisão do Arqueiro! Agilidade e visão!");
+        break;
+    default:
+        Console.WriteLine("Essa classe não existe em nossos registros. Tente novamente.");
+        break;
+}
+
+
+
+//2
+Console.Write("Defina o humor do NPC (1 = Feliz, 2 = Neutro, 3 = Irritado): ");
+int humor = int.Parse(Console.ReadLine());
+
+switch (humor)
+{
+    case 1:
+        Console.WriteLine("O NPC sorri e diz: 'Que dia adorável para uma aventura, não acha?'");
+        break;
+    case 2:
+        Console.WriteLine("O NPC acena brevemente e diz: 'Olá, viajante.'");
+        break;
+    case 3:
+        Console.WriteLine("O NPC franze a testa e resmunga: 'O que você quer? Estou ocupado!'");
+        break;
+    default:
+        Console.WriteLine("O NPC parece... confuso.");
+        break;
+}
+
+
+
+
+//3
+Console.WriteLine("Escolha a dificuldade:");
+Console.WriteLine("[1] Fácil - Aventura Relaxante");
+Console.WriteLine("[2] Normal - Desafio Equilibrado");
+Console.WriteLine("[3] Difícil - Sobrevivência Intensa");
+Console.WriteLine("[4] Pesadelo - Sofrimento Garantido");
+Console.Write("Digite o número: ");
+int dificuldade = int.Parse(Console.ReadLine());
+
+switch (dificuldade)
+{
+    case 1:
+        Console.WriteLine("HP dos Inimigos: 50, Dano do Jogador: +20%");
+        break;
+    case 2:
+        Console.WriteLine("HP dos Inimigos: 100, Dano do Jogador: Normal");
+        break;
+    case 3:
+        Console.WriteLine("HP dos Inimigos: 150, Dano do Jogador: -10%, Recursos Escassos");
+        break;
+    case 4:
+        Console.WriteLine("HP dos Inimigos: 200, Dano do Jogador: -25%, Inimigos Mais Agressivos");
+        break;
+    default:
+        Console.WriteLine("Dificuldade não reconhecida. Padrão: Normal.");
+        break;
+}
+
+
+
+
+//4
+Console.Write("Digite um comando (ex: olhar, pegar item, usar pocao, atacar): ");
+        string comando = Console.ReadLine().ToLower();
+
+        switch (comando)
+        {
+            case "olhar":
+                Console.WriteLine("Você observa ao redor. É uma sala escura e úmida...");
+                break;
+            case "pegar item":
+                Console.WriteLine("O que você gostaria de pegar?");
+                bool itemDisponivel = true; // Simulando
+                if (itemDisponivel)
+                    Console.WriteLine("Você pegou o item com sucesso!");
+                else
+                    Console.WriteLine("Não há nenhum item aqui.");
+                break;
+            case "usar pocao":
+                Console.WriteLine("Você bebe uma poção e sente suas feridas se fechando.");
+                break;
+            case "atacar":
+                Console.WriteLine("Você se prepara para o combate! Em quem você ataca?");
+                break;
+            default:
+                Console.WriteLine($"Comando não reconhecido: '{comando}'.");
+                break;
+        }
+
+
+
+//5
+string[] inventarioInicial = { "Espada Curta", "Escudo de Madeira", "Poção de Cura Menor" };
+
+        Console.WriteLine("Seu herói começa com os seguintes itens:");
+        Console.WriteLine(inventarioInicial[0]);
+        Console.WriteLine(inventarioInicial[1]);
+        Console.WriteLine(inventarioInicial[2]);
+
+
+
+
+//6
+string[] listaDeTarefas = { "Falar com o Ferreiro", "Comprar Pão na Padaria", "Investigar o Poço Velho" };
+
+        Console.WriteLine("Tarefas Pendentes:");
+        Console.WriteLine("Primeira tarefa: " + listaDeTarefas[0]);
+        Console.WriteLine("Última tarefa: " + listaDeTarefas[2]);
+
+
+
+
+//7
+int[] ultimasPontuacoes = new int[3];
+        int total = 0;
+        int maior = 0;
+
+        for (int i = 0; i < 3; i++)
+        {
+            Console.Write($"Digite a pontuação {i + 1}: ");
+            ultimasPontuacoes[i] = int.Parse(Console.ReadLine());
+            total += ultimasPontuacoes[i];
+            if (ultimasPontuacoes[i] > maior)
+            {
+                maior = ultimasPontuacoes[i];
+            }
+        }
+
+        Console.WriteLine($"Pontuação total: {total}");
+        Console.WriteLine($"Maior pontuação: {maior}");
+
+
+
+
+//8
+string[] membrosGuilda = { "Elara", "Thorin", "Mira", "Kael" };
+        Console.Write("Digite um número de 0 a 3: ");
+        int indice = int.Parse(Console.ReadLine());
+
+        if (indice >= 0 && indice < membrosGuilda.Length)
+        {
+            Console.WriteLine($"Membro selecionado: {membrosGuilda[indice]}");
+        }
+        else
+        {
+            Console.WriteLine("Não há membro com esse código.");
+        }
+
+
+
+
+//9
+int[] coordenadasX = { 5, 8, 3 };
+        int[] coordenadasY = { 10, 12, 7 };
+
+        Console.WriteLine("O mapa do tesouro indica os seguintes passos:");
+        for (int i = 0; i < coordenadasX.Length; i++)
+        {
+            Console.WriteLine($"Passo {i + 1}: Vá para X={coordenadasX[i]}, Y={coordenadasY[i]}");
+        }
+
+        // Desafio extra
+        Console.Write("Digite sua coordenada X atual: ");
+        int xAtual = int.Parse(Console.ReadLine());
+        Console.Write("Digite sua coordenada Y atual: ");
+        int yAtual = int.Parse(Console.ReadLine());
+
+        if (xAtual == coordenadasX[0] && yAtual == coordenadasY[0])
+        {
+            Console.WriteLine("Você está no local do primeiro passo do mapa!");
+        }
+        else
+        {
+            Console.WriteLine("Você ainda não chegou ao primeiro ponto.");
+        }
+
+
+
+
+//10
+Console.WriteLine("Canalizando magia poderosa...");
+        for (int i = 5; i >= 1; i--)
+        {
+            Console.WriteLine($"Canalizando... {i}s");
+        }
+        Console.WriteLine("Feitiço Concluído!");
+
+
+
+
+//11
+string[] inventarioInicial = { "Espada Curta", "Escudo de Madeira", "Poção de Cura Menor" };
+
+        Console.WriteLine("Inventário do herói:");
+        for (int i = 0; i < inventarioInicial.Length; i++)
+        {
+            Console.WriteLine($"- {inventarioInicial[i]}");
+        }
+
+
+
+
+//12
+int hpInimigo = 50;
+
+        for (int turno = 1; turno <= 4; turno++)
+        {
+            hpInimigo -= 5;
+            Console.WriteLine($"Turno {turno}: Inimigo sofre 5 de dano de veneno. HP restante: {hpInimigo}");
+
+            if (hpInimigo <= 0)
+            {
+                Console.WriteLine("Inimigo sucumbiu ao veneno!");
+                break;
+            }
+        }
+
+
+
+
+//13
+string[] inventario = { "Espada", "Chave", "Mapa", "Elmo", "Poção de Mana" };
+        bool achouPocao = false;
+
+        for (int i = 0; i < inventario.Length; i++)
+        {
+            if (inventario[i] == "Poção de Cura")
+            {
+                Console.WriteLine($"Poção de Cura encontrada no slot {i}!");
+                achouPocao = true;
+                break;
+            }
+        }
+
+        if (!achouPocao)
+        {
+            Console.WriteLine("Nenhuma Poção de Cura no inventário.");
+        }
+
+
+
+
+
+//14
+Console.Write("Valor inicial do investimento: ");
+        float principal = float.Parse(Console.ReadLine());
+
+        Console.Write("Taxa de juros anual (ex: 0.05 para 5%): ");
+        float taxa = float.Parse(Console.ReadLine());
+
+        Console.Write("Quantos anos ficará investido: ");
+        int anos = int.Parse(Console.ReadLine());
+
+        for (int i = 1; i <= anos; i++)
+        {
+            float jurosDoAno = principal * taxa;
+            principal += jurosDoAno;
+            Console.WriteLine($"Ano {i}: Saldo atual = {principal:F2}");
+        }
+
+        Console.WriteLine($"Montante total acumulado após {anos} anos: {principal:F2}");
+
+
+
+
+
+//15
+int numeroSecreto = 7;
+        int palpite;
+
+        Console.Write("Adivinhe o número secreto (entre 1 e 10): ");
+        palpite = int.Parse(Console.ReadLine());
+
+        while (palpite != numeroSecreto)
+        {
+            Console.Write("Errado! Tente novamente: ");
+            palpite = int.Parse(Console.ReadLine());
+        }
+
+        Console.WriteLine("Parabéns! Você acertou o número secreto!");
+
+
+
+
+
+//16
+bool sairDoJogo = false;
+
+        while (!sairDoJogo)
+        {
+            Console.WriteLine("\nMenu Principal:");
+            Console.WriteLine("[1] Novo Jogo");
+            Console.WriteLine("[2] Carregar");
+            Console.WriteLine("[3] Sair");
+            Console.Write("Escolha uma opção: ");
+            int escolha = int.Parse(Console.ReadLine());
+
+            switch (escolha)
+            {
+                case 1:
+                    Console.WriteLine("Iniciando novo jogo...");
+                    break;
+                case 2:
+                    Console.WriteLine("Carregando jogo salvo...");
+                    break;
+                case 3:
+                    sairDoJogo = true;
+                    break;
+                default:
+                    Console.WriteLine("Opção inválida!");
+                    break;
+            }
+        }
+
+        Console.WriteLine("Obrigado por jogar!");
+
+
+
+
+
+//17
+int hpGoblin = 30;
+        int danoElara = 10;
+
+        while (hpGoblin > 0)
+        {
+            Console.WriteLine("Elara ataca o Goblin!");
+            hpGoblin -= danoElara;
+            Console.WriteLine($"HP do Goblin: {hpGoblin}");
+            Console.WriteLine("Pressione Enter para continuar...");
+            Console.ReadLine();
+        }
+
+        Console.WriteLine("Goblin derrotado!");
+
+
+
+
+
+//18
+int cristaisColetados = 0;
+        int metaCristais = 20;
+
+        while (cristaisColetados < metaCristais)
+        {
+            Console.Write("Quantos cristais Elara encontrou nesta tentativa (1 a 3)? ");
+            int encontrados = int.Parse(Console.ReadLine());
+
+            cristaisColetados += encontrados;
+            Console.WriteLine($"Total de Cristais Coletados: {cristaisColetados} / {metaCristais}");
+        }
+
+        Console.WriteLine("Meta de Cristais Mágicos alcançada!");
+
+
+
+
+
+//19
+int andarAtual = 1;
+        int totalAndares = 5;
+        int hpElara = 20;
+
+        while (andarAtual <= totalAndares && hpElara > 0)
+        {
+            Console.WriteLine($"\nVocê está no andar {andarAtual}.");
+
+            Console.Write("Monstro (M) ou Tesouro (T) neste andar? ");
+            string evento = Console.ReadLine().ToUpper();
+
+            if (evento == "M")
+            {
+                hpElara -= 5;
+                Console.WriteLine($"Um monstro te ataca! HP Elara: {hpElara}");
+                if (hpElara <= 0)
+                {
+                    Console.WriteLine("Elara foi derrotada...");
+                    break;
+                }
+            }
+            else if (evento == "T")
+            {
+                Console.WriteLine("Você encontra um pequeno tesouro!");
+            }
+            else
+            {
+                Console.WriteLine("Resposta inválida. Nada acontece.");
+            }
+
+            andarAtual++;
+        }
+
+        if (andarAtual > totalAndares && hpElara > 0)
+        {
+            Console.WriteLine("Parabéns! Você chegou ao topo da torre!");
+        }
+
+
+
+
+
+//20
+string[] perguntas = {
+            "Qual é a capital da França?",
+            "Qual é o maior planeta do sistema solar?",
+            "Quantos elementos há na tabela periódica (valor atual)?"
+        };
+
+        string[] respostas = { "paris", "júpiter", "118" };
+        int pontuacao = 0;
+
+        for (int i = 0; i < perguntas.Length; i++)
+        {
+            Console.WriteLine(perguntas[i]);
+            string respostaJogador = Console.ReadLine().ToLower();
+
+            if (respostaJogador == respostas[i].ToLower())
+            {
+                Console.WriteLine("Correto!\n");
+                pontuacao++;
+            }
+            else
+            {
+                Console.WriteLine("Errado!\n");
+            }
+        }
+
+        Console.WriteLine($"Você acertou {pontuacao} de {perguntas.Length} perguntas.");
+
+
+
+
+
+
+//21int hpAtual = 80;
+
+        Console.WriteLine("Escolha seu power-up:");
+        Console.WriteLine("[1] Super Força");
+        Console.WriteLine("[2] Invisibilidade");
+        Console.WriteLine("[3] Cura Rápida");
+        Console.Write("Digite o número: ");
+        int escolha = int.Parse(Console.ReadLine());
+
+        switch (escolha)
+        {
+            case 1:
+                Console.WriteLine("Você sente seus músculos crescerem! Super Força ativada!");
+                break;
+            case 2:
+                Console.WriteLine("Seu corpo desaparece! Ninguém pode te ver.");
+                break;
+            case 3:
+                hpAtual += 20;
+                Console.WriteLine("Você se cura rapidamente. HP atual: " + hpAtual);
+                break;
+            default:
+                Console.WriteLine("Power-up desconhecido.");
+                break;
+        }
+
+
+
+
+//22
+int numeroSecreto = 17;
+        int tentativas = 5;
+
+        Console.WriteLine("Adivinhe o número secreto entre 1 e 30. Você tem 5 tentativas.");
+
+        for (int i = 1; i <= tentativas; i++)
+        {
+            Console.Write($"Tentativa {i}: ");
+            int palpite = int.Parse(Console.ReadLine());
+
+            if (palpite == numeroSecreto)
+            {
+                Console.WriteLine("Parabéns! Você acertou!");
+                break;
+            }
+            else if (palpite < numeroSecreto)
+            {
+                Console.WriteLine("O número secreto é maior.");
+            }
+            else
+            {
+                Console.WriteLine("O número secreto é menor.");
+            }
+
+            if (i == tentativas)
+            {
+                Console.WriteLine($"Suas tentativas acabaram. O número era: {numeroSecreto}");
+            }
+        }
+
+
+
+
+//23
+string[] inventario = { "Poção", "Espada", "Mapa" };
+
+        Console.WriteLine("Inventário:");
+        for (int i = 0; i < inventario.Length; i++)
+        {
+            Console.WriteLine($"[{i}] {inventario[i]}");
+        }
+
+        Console.Write("Escolha o número do item que deseja usar: ");
+        int escolha = int.Parse(Console.ReadLine());
+
+        if (escolha >= 0 && escolha < inventario.Length)
+        {
+            switch (inventario[escolha].ToLower())
+            {
+                case "poção":
+                    Console.WriteLine("Você bebe a Poção e recupera HP.");
+                    break;
+                case "espada":
+                    Console.WriteLine("Você equipa a Espada, pronto para o combate!");
+                    break;
+                case "mapa":
+                    Console.WriteLine("Você consulta o Mapa e descobre um caminho oculto.");
+                    break;
+                default:
+                    Console.WriteLine("Esse item não pode ser usado.");
+                    break;
+            }
+        }
+        else
+        {
+            Console.WriteLine("Slot inválido.");
+        }
+    }
+
+
+
+
+
+//24
+string[] nomesItens = { "Espada", "Poção", "Escudo", "Flechas" };
+        float[] precosItens = { 100f, 25f, 75f, 10f };
+
+        float totalCompra = 0f;
+        string entrada = "";
+
+        Console.WriteLine("Bem-vindo à Loja da Guilda!");
+        Console.WriteLine("Digite o nome do item para adicioná-lo ao carrinho ou 'finalizar' para encerrar.");
+
+        while (entrada != "finalizar")
+        {
+            Console.WriteLine("\nItens disponíveis:");
+            for (int i = 0; i < nomesItens.Length; i++)
+            {
+                Console.WriteLine($"- {nomesItens[i]}: R${precosItens[i]}");
+            }
+
+            Console.Write("Escolha: ");
+            entrada = Console.ReadLine().ToLower();
+
+            if (entrada == "finalizar") break;
+
+            bool encontrado = false;
+            for (int i = 0; i < nomesItens.Length; i++)
+            {
+                if (nomesItens[i].ToLower() == entrada)
+                {
+                    totalCompra += precosItens[i];
+                    Console.WriteLine($"{nomesItens[i]} adicionado ao carrinho.");
+                    encontrado = true;
+                    break;
+                }
+            }
+
+            if (!encontrado)
+            {
+                Console.WriteLine("Item não encontrado.");
+            }
+        }
+
+        // Bônus: desconto
+        if (totalCompra > 200)
+        {
+            Console.WriteLine("Você ganhou um desconto de 10%!");
+            totalCompra *= 0.9f;
+        }
+
+        Console.WriteLine($"\nTotal da compra: R${totalCompra:F2}");
+
+
+
+
+
+
+//25
+string[] tiposDeSala = { "Corredor Vazio", "Sala com Armadilha", "Sala com Tesouro", "Sala com Monstro Fraco", "Chefe da Masmorra" };
+
+        Console.Write("Quantas salas a masmorra terá? ");
+        int quantidade = int.Parse(Console.ReadLine());
+
+        for (int i = 0; i < quantidade; i++)
+        {
+            string tipoSala = tiposDeSala[i % tiposDeSala.Length]; // Cicla pelas salas
+            Console.WriteLine($"\nSala {i + 1}: Você entra em um(a) {tipoSala}.");
+
+            if (tipoSala.Contains("Armadilha"))
+            {
+                Console.WriteLine("Cuidado! Uma armadilha ativa!");
+            }
+            else if (tipoSala.Contains("Tesouro"))
+            {
+                Console.WriteLine("Você encontra moedas douradas!");
+            }
+            else if (tipoSala.Contains("Monstro"))
+            {
+                Console.WriteLine("Um monstro fraco aparece! Prepare-se.");
+            }
+            else if (tipoSala.Contains("Chefe"))
+            {
+                Console.WriteLine("Um chefe monstruoso surge do escuro!");
+            }
+        }
+
+
+
+
+
+//26
+string[] respostas = {
+            "Você parece confiável.",
+            "Estou só de passagem.",
+            "Não tenho tempo pra você."
+        };
+
+        int relacionamentoNPC = 0;
+
+        Console.WriteLine("NPC: Quem é você, viajante?");
+        for (int i = 0; i < respostas.Length; i++)
+        {
+            Console.WriteLine($"[{i + 1}] {respostas[i]}");
+        }
+
+        Console.Write("Escolha sua resposta (1 a 3): ");
+        int escolha = int.Parse(Console.ReadLine());
+
+        switch (escolha)
+        {
+            case 1:
+                Console.WriteLine("NPC: Hm... Pode ser útil.");
+                relacionamentoNPC += 10;
+                break;
+            case 2:
+                Console.WriteLine("NPC: Entendo...");
+                relacionamentoNPC += 0;
+                break;
+            case 3:
+                Console.WriteLine("NPC: Insolente!");
+                relacionamentoNPC -= 10;
+                break;
+            default:
+                Console.WriteLine("NPC: Você está me ignorando?");
+                relacionamentoNPC -= 5;
+                break;
+        }
+
+        if (relacionamentoNPC >= 10)
+        {
+            Console.WriteLine("O NPC parece gostar de você.");
+        }
+        else if (relacionamentoNPC <= -5)
+        {
+            Console.WriteLine("O NPC está irritado com suas respostas.");
+        }
+        else
+        {
+            Console.WriteLine("O NPC está indiferente.");
+        }
+
+
+
+
+
+//27
+int[] cartasJogador = { 8, 5, 10 };
+        int[] cartasOponente = { 7, 6, 9 };
+        int pontosJogador = 0, pontosOponente = 0;
+
+        Random rand = new Random();
+
+        for (int turno = 0; turno < 3; turno++)
+        {
+            Console.WriteLine($"\nTurno {turno + 1}");
+            Console.WriteLine("Suas cartas:");
+            for (int i = 0; i < cartasJogador.Length; i++)
+            {
+                Console.WriteLine($"[{i}] Poder: {cartasJogador[i]}");
+            }
+
+            Console.Write("Escolha sua carta (índice): ");
+            int escolha = int.Parse(Console.ReadLine());
+            int cartaJogador = cartasJogador[escolha];
+
+            int indiceOponente = rand.Next(cartasOponente.Length);
+            int cartaOponente = cartasOponente[indiceOponente];
+
+            Console.WriteLine($"Oponente jogou carta com poder {cartaOponente}");
+
+            if (cartaJogador > cartaOponente)
+            {
+                Console.WriteLine("Você venceu este turno!");
+                pontosJogador++;
+            }
+            else if (cartaJogador < cartaOponente)
+            {
+                Console.WriteLine("O oponente venceu este turno!");
+                pontosOponente++;
+            }
+            else
+            {
+                Console.WriteLine("Empate!");
+            }
+        }
+
+        Console.WriteLine($"\nPlacar Final: Você {pontosJogador} x {pontosOponente} Oponente");
+        Console.WriteLine(pontosJogador > pontosOponente ? "Você venceu a partida!" :
+                          pontosJogador < pontosOponente ? "Você perdeu a partida!" :
+                          "Empate geral!");
+
+
+
+
+
+//28
+string palavraSecreta = "TESOURO";
+        char[] progresso = new char[palavraSecreta.Length];
+        for (int i = 0; i < progresso.Length; i++) progresso[i] = '_';
+
+        int tentativas = 10;
+
+        while (tentativas > 0)
+        {
+            Console.WriteLine("\nMensagem: " + string.Join(" ", progresso));
+            Console.Write($"Tentativas restantes: {tentativas}. Digite uma letra: ");
+            char letra = char.ToUpper(Console.ReadKey().KeyChar);
+            Console.WriteLine();
+
+            bool acertou = false;
+
+            for (int i = 0; i < palavraSecreta.Length; i++)
+            {
+                if (palavraSecreta[i] == letra && progresso[i] == '_')
+                {
+                    progresso[i] = letra;
+                    acertou = true;
+                }
+            }
+
+            if (!acertou) tentativas--;
+
+            if (new string(progresso) == palavraSecreta)
+            {
+                Console.WriteLine("Parabéns! Você decifrou a mensagem rúnica!");
+                return;
+            }
+        }
+
+        Console.WriteLine("Você falhou! A palavra era: " + palavraSecreta);
+
+
+
+
+
+//29
+string[] inventario = new string[5];
+        int inventarioIndex = 0;
+        bool temChave = false;
+        string salaAtual = "entrada";
+
+        while (true)
+        {
+            Console.Write($"\nVocê está na sala: {salaAtual}. Comando: ");
+            string comando = Console.ReadLine().ToLower();
+
+            if (comando == "olhar")
+            {
+                if (salaAtual == "entrada")
+                {
+                    Console.WriteLine("Você vê uma porta e uma chave no chão.");
+                }
+                else if (salaAtual == "salasecreta")
+                {
+                    Console.WriteLine("Você encontra um tesouro brilhante!");
+                }
+            }
+            else if (comando == "pegar chave" && salaAtual == "entrada")
+            {
+                if (!temChave && inventarioIndex < inventario.Length)
+                {
+                    inventario[inventarioIndex++] = "chave";
+                    temChave = true;
+                    Console.WriteLine("Você pegou a chave.");
+                }
+                else
+                {
+                    Console.WriteLine("Você já tem a chave ou o inventário está cheio.");
+                }
+            }
+            else if (comando == "usar chave" && salaAtual == "entrada" && temChave)
+            {
+                Console.WriteLine("Você usou a chave e abriu a porta.");
+                salaAtual = "salasecreta";
+            }
+            else if (comando == "inventario")
+            {
+                Console.WriteLine("Itens no inventário:");
+                foreach (var item in inventario)
+                {
+                    if (item != null) Console.WriteLine("- " + item);
+                }
+            }
+            else if (comando == "sair")
+            {
+                Console.WriteLine("Você saiu da aventura.");
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Comando desconhecido.");
+            }
+        }
