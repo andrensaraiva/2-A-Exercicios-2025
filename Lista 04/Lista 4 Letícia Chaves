@@ -1,0 +1,439 @@
+Console.Write("Possui Pena de Grifo? (sim/não): ");
+        string pena = Console.ReadLine().ToLower();
+
+        Console.Write("Possui Escama de Basilisco? (sim/não): ");
+        string escama = Console.ReadLine().ToLower();
+
+        Console.Write("Possui Flor da Lua Sangrenta? (sim/não): ");
+        string flor = Console.ReadLine().ToLower();
+
+        Console.Write("Quantas moedas de ouro possui? ");
+        int moedas = int.Parse(Console.ReadLine());
+
+        // Verifica se todos os ingredientes estão presentes e moedas suficientes
+        if (pena == "sim" && escama == "sim" && flor == "sim" && moedas >= 500) {
+            Console.WriteLine("A poção poderosa foi criada com sucesso!");
+        } else {
+            Console.WriteLine("A criação da poção falhou.");
+            if (pena != "sim") Console.WriteLine("- Falta a Pena de Grifo.");
+            if (escama != "sim") Console.WriteLine("- Falta a Escama de Basilisco.");
+            if (flor != "sim") Console.WriteLine("- Falta a Flor da Lua Sangrenta.");
+            if (moedas < 500) Console.WriteLine("- Moedas insuficientes. São necessárias pelo menos 500.");
+        }
+
+
+
+
+
+string[] respostasCorretas = { "fogo", "tempo", "sombra" };
+        int acertos = 0;
+
+        Console.WriteLine("Resolva os enigmas:");
+
+        Console.Write("1. Sou quente e destruo, mas também aqueço. O que sou? ");
+        string r1 = Console.ReadLine().ToLower();
+        if (r1 == respostasCorretas[0]) acertos++;
+
+        Console.Write("2. Sempre passa, nunca volta. O que é? ");
+        string r2 = Console.ReadLine().ToLower();
+        if (r2 == respostasCorretas[1]) acertos++;
+
+        Console.Write("3. Está sempre com você, mas desaparece no escuro. O que é? ");
+        string r3 = Console.ReadLine().ToLower();
+        if (r3 == respostasCorretas[2]) acertos++;
+
+        Console.WriteLine($"\nVocê acertou {acertos} enigma(s).");
+
+        if (acertos == 3) {
+            Console.WriteLine("A armadilha foi completamente desativada!");
+        } else if (acertos == 2) {
+            Console.WriteLine("A armadilha foi parcialmente desativada. Você consegue escapar com esforço!");
+        } else {
+            Console.WriteLine("Você falhou em desativar a armadilha e sofre as consequências...");
+
+
+
+
+
+
+Console.WriteLine("Escolha uma ação:");
+        Console.WriteLine("[1] Defender a floresta");
+        Console.WriteLine("[2] Ajudar os mercadores");
+        Console.WriteLine("[3] Atacar os dois lados");
+        Console.Write("Digite sua escolha: ");
+        int escolha = int.Parse(Console.ReadLine());
+
+        int reputacaoElfos = 0;
+        int reputacaoComerciantes = 0;
+
+        switch (escolha) {
+            case 1:
+                reputacaoElfos += 10;
+                reputacaoComerciantes -= 5;
+                Console.WriteLine("Os elfos agradecem sua bravura!");
+                Console.WriteLine("Os mercadores desaprovam sua decisão.");
+                break;
+            case 2:
+                reputacaoElfos -= 5;
+                reputacaoComerciantes += 10;
+                Console.WriteLine("Os mercadores o recompensam!");
+                Console.WriteLine("Os elfos se sentem traídos.");
+                break;
+            case 3:
+                reputacaoElfos -= 10;
+                reputacaoComerciantes -= 10;
+                Console.WriteLine("Todos agora desconfiam de você...");
+                break;
+            default:
+                Console.WriteLine("Ação inválida.");
+                break;
+        }
+
+
+
+
+
+
+Console.Write("Força base: ");
+        int forca = int.Parse(Console.ReadLine());
+
+        Console.Write("Agilidade base: ");
+        int agilidade = int.Parse(Console.ReadLine());
+
+        Console.Write("Inteligência base: ");
+        int inteligencia = int.Parse(Console.ReadLine());
+
+        Console.Write("Equipamento - Elmo (ex: 'ferro', 'aço', 'mithril'): ");
+        string elmo = Console.ReadLine().ToLower();
+
+        Console.Write("Equipamento - Armadura: ");
+        string armadura = Console.ReadLine().ToLower();
+
+        Console.Write("Equipamento - Arma: ");
+        string arma = Console.ReadLine().ToLower();
+
+        // Aplicando bônus simples
+        if (elmo == "aço") inteligencia += 2;
+        else if (elmo == "mithril") inteligencia += 5;
+
+        if (armadura == "ferro") forca += 3;
+        else if (armadura == "mithril") agilidade += 4;
+
+        if (arma == "espada") forca += 5;
+        else if (arma == "cajado") inteligencia += 5;
+
+        Console.WriteLine($"\nAtributos finais:");
+        Console.WriteLine($"Força: {forca}, Agilidade: {agilidade}, Inteligência: {inteligencia}");
+
+
+
+
+
+
+
+int travasAbertas = 0;
+
+        Console.Write("Possui chave de bronze? (sim/não): ");
+        if (Console.ReadLine().ToLower() == "sim") travasAbertas++;
+
+        Console.Write("Digite o código do cofre: ");
+        int codigo = int.Parse(Console.ReadLine());
+        if (codigo == 1234) travasAbertas++;
+
+        Console.Write("Possui Amuleto da Serpente? (sim/não): ");
+        if (Console.ReadLine().ToLower() == "sim") travasAbertas++;
+
+        Console.WriteLine($"\nTravas abertas: {travasAbertas}/3");
+
+        if (travasAbertas == 3) {
+            Console.WriteLine("O cofre foi destrancado com sucesso!");
+        } else {
+            Console.WriteLine("O cofre permanece trancado.");
+        }
+
+
+
+
+
+
+
+Console.Write("Clima atual (chuva, sol, neve): ");
+        string clima = Console.ReadLine().ToLower();
+
+        Console.Write("Movimento base: ");
+        int movimento = int.Parse(Console.ReadLine());
+
+        Console.Write("Dano mágico base: ");
+        int danoMagico = int.Parse(Console.ReadLine());
+
+        switch (clima) {
+            case "chuva":
+                movimento -= 2;
+                danoMagico += 3;
+                break;
+            case "sol":
+                movimento += 1;
+                break;
+            case "neve":
+                movimento -= 3;
+                danoMagico -= 2;
+                break;
+            default:
+                Console.WriteLine("Clima desconhecido. Sem alterações.");
+                break;
+        }
+
+        Console.WriteLine($"\nMovimento atual: {movimento}");
+        Console.WriteLine($"Dano mágico atual: {danoMagico}");
+
+
+
+
+
+
+
+Console.Write("Qual sua fama? (herói, vilão, neutro): ");
+        string fama = Console.ReadLine().ToLower();
+
+        switch (fama) {
+            case "herói":
+                Console.WriteLine("NPC: 'É uma honra conhecê-lo, bravo guerreiro!'");
+                break;
+            case "vilão":
+                Console.WriteLine("NPC: 'Mantenha distância, criatura desprezível...'");
+                break;
+            case "neutro":
+                Console.WriteLine("NPC: 'Olá, viajante. Deseja algo?'");
+                break;
+            default:
+                Console.WriteLine("NPC: 'Não sei quem você é...'");
+                break;
+        }
+
+
+
+
+
+
+
+Console.WriteLine("Escolha 2 ingredientes mágicos:");
+        Console.WriteLine("[1] Raiz de Mandrágora");
+        Console.WriteLine("[2] Lágrima de Fada");
+        Console.WriteLine("[3] Essência de Fogo");
+
+        Console.Write("Ingrediente 1 (número): ");
+        int ing1 = int.Parse(Console.ReadLine());
+
+        Console.Write("Ingrediente 2 (número): ");
+        int ing2 = int.Parse(Console.ReadLine());
+
+        string resultado = "";
+
+        if ((ing1 == 1 && ing2 == 2) || (ing1 == 2 && ing2 == 1))
+            resultado = "Poção de Regeneração – Recupera vida ao longo do tempo.";
+        else if ((ing1 == 1 && ing2 == 3) || (ing1 == 3 && ing2 == 1))
+            resultado = "Poção Explosiva – Dano em área.";
+        else if ((ing1 == 2 && ing2 == 3) || (ing1 == 3 && ing2 == 2))
+            resultado = "Poção da Invisibilidade – Torna o usuário invisível por um curto período.";
+        else
+            resultado = "A mistura falhou. Poção instável criada.";
+
+        Console.WriteLine($"\nResultado: {resultado}");
+
+
+
+
+
+
+
+int hpJogador = 100;
+        int hpMonstro = 80;
+        int danoBase = 20;
+
+        Console.WriteLine("Escolha sua ação: [1] Atacar  [2] Defender");
+        int acao = int.Parse(Console.ReadLine());
+
+        if (acao == 1) {
+            // Jogador ataca
+            hpMonstro -= danoBase;
+            Console.WriteLine($"Você ataca e causa {danoBase} de dano. HP do monstro: {hpMonstro}");
+        } else if (acao == 2) {
+            // Jogador defende
+            Console.WriteLine("Você se defende. O dano recebido será reduzido.");
+        } else {
+            Console.WriteLine("Ação inválida.");
+        }
+
+        // Monstro ataca
+        int danoMonstro = 15;
+        if (acao == 2) danoMonstro /= 2;
+
+        hpJogador -= danoMonstro;
+        Console.WriteLine($"O monstro ataca! Você sofre {danoMonstro} de dano. Seu HP: {hpJogador}");
+
+
+
+
+
+
+
+
+Random rand = new Random();
+        string[] eventos = { "ataque de bandidos", "tempestade", "desabamento" };
+        string evento = eventos[rand.Next(eventos.Length)];
+
+        Console.WriteLine($"Evento aleatório: {evento}");
+
+        Console.Write("Você possui escudo? (sim/não): ");
+        string escudo = Console.ReadLine().ToLower();
+
+        if (evento == "ataque de bandidos") {
+            if (escudo == "sim")
+                Console.WriteLine("Você se defendeu com sucesso!");
+            else
+                Console.WriteLine("Você perdeu 30 HP.");
+        } else if (evento == "tempestade") {
+            Console.WriteLine("Sua velocidade de movimento foi reduzida.");
+        } else if (evento == "desabamento") {
+            Console.WriteLine("Você ficou preso por 1 turno.");
+        }
+
+
+
+
+
+
+
+Console.Write("Alavanca 1 (cima/baixo): ");
+        string a1 = Console.ReadLine().ToLower();
+
+        Console.Write("Alavanca 2 (cima/baixo): ");
+        string a2 = Console.ReadLine().ToLower();
+
+        Console.Write("Alavanca 3 (cima/baixo): ");
+        string a3 = Console.ReadLine().ToLower();
+
+        if (a1 == "cima" && a2 == "baixo" && a3 == "cima") {
+            Console.WriteLine("A porta secreta se abre com um som profundo!");
+        } else {
+            Console.WriteLine("Nada acontece... tente outra combinação.");
+        }
+
+
+
+
+
+
+
+Console.Write("Material (ferro, aço, mithril): ");
+        string material = Console.ReadLine().ToLower();
+
+        Console.Write("Nível de habilidade (0 a 100): ");
+        int habilidade = int.Parse(Console.ReadLine());
+
+        string qualidade;
+
+        if (habilidade < 30)
+            qualidade = "comum";
+        else if (habilidade < 70)
+            qualidade = "raro";
+        else
+            qualidade = "épico";
+
+        Console.WriteLine($"Você criou uma arma de {material} de qualidade {qualidade}!");
+
+
+
+
+
+
+
+
+Console.Write("Moral inicial da tropa (0 a 100): ");
+        int moral = int.Parse(Console.ReadLine());
+
+        Console.Write("Evento recente (vitória, derrota, bônus): ");
+        string evento = Console.ReadLine().ToLower();
+
+        switch (evento) {
+            case "vitória":
+                moral += 15;
+                Console.WriteLine("A tropa está motivada!");
+                break;
+            case "derrota":
+                moral -= 20;
+                Console.WriteLine("A tropa está desanimada...");
+                break;
+            case "bônus":
+                moral += 10;
+                Console.WriteLine("A moral aumentou graças ao bônus!");
+                break;
+            default:
+                Console.WriteLine("Evento desconhecido.");
+                break;
+        }
+
+        // Limitar entre 0 e 100
+        moral = Math.Clamp(moral, 0, 100);
+
+        Console.WriteLine($"Moral atual da tropa: {moral}");
+
+
+
+
+
+
+
+
+
+string[] codigoCorreto = { "sol", "lua", "vento" };
+        string[] tentativas = new string[3];
+        int corretas = 0;
+
+        for (int i = 0; i < 3; i++) {
+            Console.Write($"Digite a runa {i + 1}: ");
+            tentativas[i] = Console.ReadLine().ToLower();
+            if (tentativas[i] == codigoCorreto[i]) {
+                corretas++;
+            }
+        }
+
+        Console.WriteLine($"\nRunas corretas na posição: {corretas}/3");
+
+        if (corretas < 3) {
+            Console.WriteLine("Dica: Tente inverter a ordem de algumas runas.");
+        } else {
+            Console.WriteLine("As runas brilham e a entrada do templo se revela!");
+        }
+
+
+
+
+
+
+
+
+
+int tesouro = 1000;
+        int felicidade = 50;
+        int forcaMilitar = 50;
+
+        Console.WriteLine("Decisão política:");
+        Console.WriteLine("[1] Aumentar impostos");
+        Console.WriteLine("[2] Investir em festas");
+        Console.Write("Escolha: ");
+        int escolha = int.Parse(Console.ReadLine());
+
+        if (escolha == 1) {
+            tesouro += 300;
+            felicidade -= 10;
+            Console.WriteLine("O povo reclama, mas os cofres enchem.");
+        } else if (escolha == 2) {
+            tesouro -= 200;
+            felicidade += 15;
+            Console.WriteLine("O povo celebra nas ruas!");
+        }
+
+        Console.WriteLine($"\nTesouro: {tesouro}");
+        Console.WriteLine($"Felicidade: {felicidade}");
+        Console.WriteLine($"Força Militar: {forcaMilitar}");
