@@ -141,11 +141,11 @@ else
 }
 Console.ReadLine();
 
-//Fase 9 
+// Fase 9 
 
 string[] inventario = {"Poção de Cura","Adaga","Fragmento de Código",""};
 
-//Fase 10
+// Fase 10
 
 if (inventario[0] == "Poção de Cura")
 {
@@ -156,13 +156,13 @@ else
     Console.WriteLine("Como você não tem poção de cura impossivel");
 }
 Console.ReadLine();
-//Fase 11
+// Fase 11
 Random dado = new Random();
 int RNG = dado.Next(1, 21);
 Console.WriteLine("Seja Bem vindo, aventureiro deixe-me falar seu numero da sorte ");
 Console.WriteLine($"Oráculo do Caos: 'Seu numero da sorte é... {RNG}'");
 Console.ReadLine();
-//Fase 12 
+// Fase 12 
 string[] vendendo = { "Espada Rúnica", "Armadura Lendária", "Anel Místico" };
 int item = dado.Next(1, 4);
 Console.WriteLine("Olá, jovem aventureiro de uma olhadas no itens e ele um com você");
@@ -183,14 +183,14 @@ switch (item)
 }
 Console.ReadLine();
 
-//Fase 13
+// Fase 13
 
 Console.WriteLine("Inventário");
 for (int i = 0; i < 4; i++)
     Console.WriteLine($"Slot {i + 1}: {inventario[i]}");
 Console.ReadLine();
 
-//Fase 14
+// Fase 14
 Console.WriteLine("Opa aventureiro que tal tentar da um up na sua arma");
 Console.ReadLine();
 float bonus = 0;
@@ -209,7 +209,7 @@ for (int i = 1; i <= 3; i++)
 }
 Console.ReadLine();
 
-//Fase 15 
+// Fase 15 
 
 int goblins = dado.Next(2, 6);
 Console.WriteLine($"Você foi emboscado por {goblins} goblins!");
@@ -261,6 +261,7 @@ while (hpHeroi > 0 && hpLich > 0)
         }
     }
 }
+// Fase 20
 if (hpHeroi > 0)
     Console.WriteLine($"Parabéns, {nome}! Você derrotou o Lich do Loop Infinito");
 else if (hpLich > 0)
