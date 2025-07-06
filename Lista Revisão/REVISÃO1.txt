@@ -1,0 +1,271 @@
+﻿// Fase 1
+
+string nome;
+
+Console.WriteLine("Qual é o seu nome aventureiro?");
+
+nome = Console.ReadLine();
+
+Console.WriteLine("Seja Bem Vindo avetureiro " + nome);
+
+// Fase 2
+
+Console.WriteLine("Distribua seus 10 pontos para Força e Agilidade ");
+
+int forca = 0;
+
+int agilidade = 0;
+
+Console.WriteLine("Quantos pontos para aumentar sua força?");
+
+forca = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Quantos pontos para aumentar sua Agilidade?");
+
+agilidade = int.Parse(Console.ReadLine());
+
+if ((forca + agilidade) > 10)
+
+{
+
+    Console.WriteLine("FALHA");
+
+    while ((forca + agilidade) > 10)
+    {
+
+
+        Console.WriteLine("Quantos pontos para aumentar em força?");
+
+        forca = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Quantos pontos para aumentar em Agilidade?");
+
+        agilidade = int.Parse(Console.ReadLine());
+    }
+}
+
+// Fase 3
+
+Console.WriteLine("Em uma mesa você encontra um mapa e 25 moedas de ouros!!");
+Console.ReadLine();
+
+string[] itens = new string[4];
+
+int moedas = 25;
+
+itens[0] = "Mapa";
+
+// Fase 4
+
+Console.WriteLine("Ficha de Personagem");
+
+Console.WriteLine($"Nome: {nome}");
+
+Console.WriteLine($"Força: {forca}");
+
+Console.WriteLine($"Agilidade: {agilidade}");
+
+for (int i = 0; i < 3; i++)
+
+{
+
+    Console.WriteLine($"Itens {1 + i}: {itens[i]}");
+
+}
+Console.ReadLine();
+
+// Fase 5
+
+Console.WriteLine("???: Você está preparado, tenho uma missão voltada para você, você precisa encontrar os 3 Fragmentos de Código para acabar com o Drumendore do Void");
+Console.ReadLine();
+
+// Fase 6
+
+Console.Write("Você chega a uma encruzilhada. Quer ir para a 'floresta' ou para as 'montanhas'? ");
+string caminho = Console.ReadLine();
+if (caminho == "floresta")
+{
+    Console.WriteLine("Você entra em uma floresta assustadora");
+}
+else if (caminho == "montanhas") 
+{
+    Console.WriteLine("Você escala montanhas com altura extremamente alta");
+}
+
+// Fase 7
+
+Console.WriteLine($"Passando pelo caminho da {caminho} você encontra um portão bloqueando a passagem");
+if (forca > 5)
+{
+    Console.WriteLine("Você usa sua força para abrir o portão trancado!");
+}
+else if (agilidade > 7)
+{
+    Console.WriteLine("Você se esgueira por uma brecha no portão!");
+}
+else
+{
+    Console.WriteLine("Você não consegue abrir o portão. Precisa ficar mais forte ou ágil.");
+}
+
+Console.ReadLine();
+
+
+// Fase 8
+
+Console.WriteLine("Andando pelo caminho você acha uma caverna");
+Console.WriteLine("1 - entrar na caverna");
+Console.WriteLine("2 - passar reto");
+int escolha = int.Parse(Console.ReadLine());
+bool chave1 = false;
+bool chave2 = false;
+switch (escolha)
+{
+    case 1:
+         chave1 = true;
+         chave2 = true;
+        Console.WriteLine("Você encontra duas chaves e pega para você e sai da caverna");
+        break;
+    case 2:
+        Console.WriteLine("Você passa reto");
+        break;
+}
+Console.WriteLine("Andando mais um pouco você vê um báu e tenta abrir ");
+if (chave1 == true && chave2 == true)
+{
+    Console.WriteLine("Você abre o baú selado e encontra o Primeiro Fragmento de Código!");
+}
+else
+{
+    Console.WriteLine("Você não tem os itens necessários para abrir o baú.");
+}
+Console.ReadLine();
+
+// Fase 9 
+
+string[] inventario = {"Poção de Cura","Adaga","Fragmento de Código",""};
+
+// Fase 10
+
+if (inventario[0] == "Poção de Cura")
+{
+    Console.WriteLine("Você tem uma Poção de Cura pronta para usar.");
+}
+else
+{
+    Console.WriteLine("Como você não tem poção de cura impossivel");
+}
+Console.ReadLine();
+// Fase 11
+Random dado = new Random();
+int RNG = dado.Next(1, 21);
+Console.WriteLine("Seja Bem vindo, aventureiro deixe-me falar seu numero da sorte ");
+Console.WriteLine($"Oráculo do Caos: 'Seu numero da sorte é... {RNG}'");
+Console.ReadLine();
+// Fase 12 
+string[] vendendo = { "Espada Rúnica", "Armadura Lendária", "Anel Místico" };
+int item = dado.Next(1, 4);
+Console.WriteLine("Olá, jovem aventureiro de uma olhadas no itens e ele um com você");
+switch (item)
+{
+    case 1:
+        Console.WriteLine("O vendedor oferece uma Espada Rúnica!");
+        inventario[3] = vendendo[0];
+        break;
+    case 2:
+        Console.WriteLine("O vendedor oferece uma Armadura Lendária!");
+        inventario[3] = vendendo[1];
+        break;
+    case 3:
+        Console.WriteLine("O vendedor oferece um Anel Místico!");
+        inventario[3] = vendendo[2];
+        break;
+}
+Console.ReadLine();
+
+// Fase 13
+
+Console.WriteLine("Inventário");
+for (int i = 0; i < 4; i++)
+    Console.WriteLine($"Slot {i + 1}: {inventario[i]}");
+Console.ReadLine();
+
+// Fase 14
+Console.WriteLine("Opa aventureiro que tal dar uma melhorada na sua arma");
+Console.ReadLine();
+float bonus = 0;
+for (int i = 1; i <= 3; i++)
+{
+    Console.WriteLine($"Ciclo de Forja {i} iniciado...");
+    if (dado.Next(1, 5) == 1)
+    {
+        Console.WriteLine("Sucesso! Você conseguiu uma melhoria crítica!");
+        bonus = (bonus + 0.5f);
+    }
+    else
+    {
+        Console.WriteLine("Nada de especial aconteceu...");
+    }
+}
+Console.ReadLine();
+
+// Fase 15 
+
+int goblins = dado.Next(2, 6);
+Console.WriteLine($"Você foi emboscado por {goblins} goblins!");
+for (int i = 1; i <= goblins; i++)
+    Console.WriteLine($"Goblin {i} derrotado!");
+Console.ReadLine();
+
+// Fase 16
+
+int hpHeroi = 100;
+int hpDrumendore = dado.Next(120, 181);
+Console.WriteLine("Você chega no covil do mal e algo cai do céu");
+Console.WriteLine($"O Drumendore aparece com {hpDrumendore} HP! Prepare-se!");
+Console.ReadLine();
+
+// Fase 17,18,19
+
+while (hpHeroi > 0 && hpDrumendore > 0)
+{
+    Console.Write("Você quer 'atacar' ou 'usar pocao'? ");
+    string acao = Console.ReadLine();
+
+    if (acao == "usar pocao" && inventario[0] == "Poção de Cura")
+    {
+        int cura = dado.Next(15, 40);
+        hpHeroi = hpHeroi + cura;
+        Console.WriteLine($"Você usou uma Poção de Cura e recuperou {cura} HP! HP atual: {hpHeroi}");
+        Console.WriteLine("Você gastou sua única poção de cura");
+        inventario[0] = "";
+    }
+    else
+    {
+        int danoHeroi = dado.Next(10, 21);
+        hpDrumendore =hpDrumendore - danoHeroi;
+        Console.WriteLine($"Você ataca o Lich causando {danoHeroi * (1+bonus)} de dano! HP do Drumendore: {hpDrumendore}");
+    }
+
+    if (hpDrumendore > 0)
+    {
+        int danoDrumendore = dado.Next(10, 21);
+        hpHeroi =hpHeroi- danoDrumendore;
+        Console.WriteLine($"O Drumendore ataca causando {danoDrumendore} de dano! Seu HP: {hpHeroi}");
+
+        if (hpDrumendore) < 50 && dado.Next(0, 2) == 0)
+        {
+            int feitiço = 30;
+            hpHeroi =hpHeroi - feitiço;
+            Console.WriteLine($"O Lich lança um Feitiço Desesperado causando {feitiço} de dano extra!");
+        }
+    }
+}
+// Fase 20
+if (hpHeroi > 0)
+    Console.WriteLine($"Parabéns, {nome}! Você derrotou o Drumendore do Loop Infinito");
+else if (hpDrumendore > 0)
+    Console.WriteLine($"O Drumendore do Void devorou sua alma, {nome}...");
+else
+    Console.WriteLine("Ambos caem juntos...");
+
